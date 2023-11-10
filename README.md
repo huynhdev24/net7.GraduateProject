@@ -1,1 +1,1 @@
-# net7.GraduateProject
+# net7.GraduateProject[![.NET](https://github.com/huynhdev24/net7.GraduateProject/actions/workflows/dotnet.yml/badge.svg)](https://github.com/huynhdev24/net7.GraduateProject/actions/workflows/dotnet.yml)
