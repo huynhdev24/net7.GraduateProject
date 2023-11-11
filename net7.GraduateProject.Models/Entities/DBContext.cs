@@ -16,7 +16,15 @@ namespace net7.GraduateProject.Models.Entities
         /// 
         /// </summary>
         /// <returns></returns>
-        public DBContext(DbContextOptions<DBContext> options) : base(options) { }
-        protected override void OnModelCreating(ModelBuilder modelBuilder) { }
+        //public DBContext(DbContextOptions<DBContext> options) : base(options) { }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder) { }
+        public DBContext(string connectionString) : base(GetOptions(connectionString))
+        {
+        }
+
+        private static DbContextOptions GetOptions(string connectionString)
+        {
+            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
+        }
     }
 }
